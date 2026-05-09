@@ -1,0 +1,119 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+
+    background: linear-gradient(135deg, #a8ff78, #000000, #3333ff);
+
+    min-height: 100vh;
+
+  .contenedor-video{
+     position: relative;
+
+     width: 800px;
+
+     margin: 50px auto;
+   }
+
+ #fondo-video{
+     width: 100%;
+
+     border-radius: 20px;
+
+     display: block;
+    }
+
+  .contenedor-video iframe{
+     position: absolute;
+
+     top: 50%;
+     left: 50%;
+
+     transform: translate(-50%, -50%);
+
+     border-radius: 20px;
+
+     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+   } 
+
+
+}
+
+/* Fondo exclusivo para SOBRE ESTO */
+.sobre-page{
+    background: linear-gradient(135deg, #141e30, #243b55);
+
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    display: flex;
+    min-height: 80px;
+
+    background: linear-gradient(135deg, #a8ff78, #3333ff);
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 30px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 70px;
+    margin-right: 15px;
+
+    border-radius: 12px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 20px;
+
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: white;
+
+    text-shadow: 0 0 10px white;
+}
+
+@media (max-width:700px){
+
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+
+}
+
+
+#reloj{
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-left: 20px;
+}
+
+nav{
+    display: inline-table;
+    display: grid;
+    align-items: center;
+}
+

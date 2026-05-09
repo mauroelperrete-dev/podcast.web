@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="decoracion.css">
+    <title>Inicio</title>
+
+</head>
+<body>
+   <h1 style="color: azure;">Aviso!! Abrimos a la hora que podamos y despues de las 11:00pm horario Argentina cerramos </h1>
+    <header>
+        <a href="#" class="logo">
+            <img src="logo mejorado.png" alt="logo web">
+            <h2>Random podcast.N_923 <br> El peor entretenimiento</h2>
+        </a>
+        <nav>
+            <div id="reloj"></div>
+
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="sobreesto.html" class="nav-link">Sobre esto</a>
+            <a href="que.html" class="nav-link">mas</a>
+
+        </nav>
+    </header>
+
+    <script>
+
+ function actualizarReloj(){
+
+    const opciones = {
+        timeZone: 'America/Argentina/Buenos_Aires',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    };
+
+    const horaArgentina =
+    new Intl.DateTimeFormat('es-AR', opciones)
+    .format(new Date());
+
+    document.getElementById("reloj")
+    .innerHTML = horaArgentina;
+ }
+
+ setInterval(actualizarReloj, 1000);
+
+ actualizarReloj();
+
+ </script>
+
+
+ 
+  <h5 class="TEXTOdeweb", style="color: white;", style="border: 9px;">Cabe aclarar que este sitio es todavia una prueba de el plan mayor al que se piensa hacer.
+    Todo lo que hay es hecho a modo de broma y no se busca ninguna intencion molesta.
+    En fin, espero/amos que les guste. Chau!
+  </h5>
+
+  <h2 style="color: aliceblue;">Video mas reciente:</h2>
+
+  <section class="contenedor-video">
+
+    <img src="Captura de pantalla 2026-05-09 023952.png"
+    alt="fondovideo"
+    id="fondo-video">
+
+    <iframe width="560" height="315"
+     src="https://www.youtube.com/embed/wCIWd3sdBRk"
+     title="YouTube video player"
+     frameborder="0"
+     allowfullscreen>
+    </iframe>
+
+ </section>
+
+</body>
+</html>
