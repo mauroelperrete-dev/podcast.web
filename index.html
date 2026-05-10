@@ -1,3 +1,5 @@
+
+<div id="horariocierre">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +24,48 @@
     <title>Inicio</title>
 
 </head>
-<body>
+
+  <script>
+
+          function verificarHorario(){
+                const horaArgentina = new Date(
+                  new Date().toLocaleString(
+                 "en-US",
+                  {timeZone: "America/Argentina/Buenos_Aires"}
+                  )
+                );
+
+             const hora = horaArgentina.getHours();
+
+             const contenido =
+             document.getElementById("contenido");
+
+                if(hora >= 23 || hora < 7){
+
+                  contenido.innerHTML = `
+                    <div style="
+                     height:100vh;
+                     display:flex;
+                       justify-content:center;
+                      align-items:center;
+                      color:white;
+                      font-size:40px;
+                      font-family:Poppins;
+                     text-align:center;
+                     ">
+                     🔒 El podcast está cerrado.<br>
+                     Volvemos a las 07:00 AM
+                   </div>
+                  `;
+                }
+            }
+          
+
+          verificarHorario();
+
+        </script>
+
+    <body>
     <header>
         <a href="#" class="logo">
             <img src="logo mejorado.png" alt="logo web">
@@ -89,3 +132,4 @@
 
 </body>
 </html>
+</div>
